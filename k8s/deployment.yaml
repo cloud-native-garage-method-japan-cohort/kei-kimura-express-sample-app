@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
-    app.openshift.io/vcs-uri: https://github.com/upslopeio/express-sample-app
+    #app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
+    #app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-japan-cohort/kei-kimura-express-sample-app.git
   labels:
-    app: andreas-kavountzis-pipeline-from-scratch
-    app.kubernetes.io/instance: andreas-kavountzis-pipeline-from-scratch
-    app.kubernetes.io/name: andreas-kavountzis-pipeline-from-scratch
+    app: kei-kimura-pipeline-from-scratch
+    app.kubernetes.io/instance: kei-kimura-pipeline-from-scratch
+    app.kubernetes.io/name: kei-kimura-pipeline-from-scratch
     app.openshift.io/runtime: js
-  name: andreas-kavountzis-pipeline-from-scratch
+  name: kei-kimura-pipeline-from-scratch
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
@@ -31,7 +31,7 @@ spec:
           - name: PROTOCOLS
           - name: LOG_LEVEL
             value: debug
-          image: quay.io/dotnsf/express-sample-app
+          image: quay.io/dotnsf/express-sample-app-day5
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
