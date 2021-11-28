@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: kei-kimura-pipeline-from-scratch
+    app.kubernetes.io/instance: kei-kimura-pipeline-from-scratch
+    app.kubernetes.io/name: kei-kimura-pipeline-from-scratch
+  name: kei-kimura-pipeline-from-scratch
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app.kubernetes.io/instance: kei-kimura-pipeline-from-scratch
+    app.kubernetes.io/name: kei-kimura-pipeline-from-scratch
+  sessionAffinity: None
+  type: ClusterIP
