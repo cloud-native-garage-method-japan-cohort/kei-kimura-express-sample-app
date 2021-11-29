@@ -31,7 +31,7 @@ spec:
           - name: PROTOCOLS
           - name: LOG_LEVEL
             value: debug
-        - name: kei-kimura-pipeline-from-scratch
+          name: kei-kimura-pipeline-from-scratch
           image: quay.io/dotnsf/express-sample-app-day5:latest
           imagePullPolicy: IfNotPresent
           livenessProbe:
