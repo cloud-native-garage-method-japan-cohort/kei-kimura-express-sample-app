@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations:
+  #annotations:
     #app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
     #app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-japan-cohort/kei-kimura-express-sample-app.git
   labels:
@@ -31,7 +31,7 @@ spec:
           - name: PROTOCOLS
           - name: LOG_LEVEL
             value: debug
-          image: quay.io/dotnsf/express-sample-app-day5
+          image: quay.io/dotnsf/express-sample-app-day5:latest
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
