@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  #annotations:
-    #app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
-    #app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-japan-cohort/kei-kimura-express-sample-app.git
+#  annotations:
+#    app.openshift.io/vcs-ref: f7580aa1eb6f7176705176e201ecff4de93edafb
+#    app.openshift.io/vcs-uri: https://github.com/cloud-native-garage-method-japan-cohort/kei-kimura-express-sample-app
   labels:
     app: kei-kimura-pipeline-from-scratch
     app.kubernetes.io/instance: kei-kimura-pipeline-from-scratch
@@ -33,6 +33,7 @@ spec:
             value: debug
           name: kei-kimura-pipeline-from-scratch
           image: quay.io/dotnsf/express-sample-app-day5:latest
+          #image: quay.io/ibmamnt/express-sample-app
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3
